@@ -6,13 +6,13 @@ const HiddenSearchBar = () => {
   const [bgColor, setBgColor] = useState("bg-white");
 
   const handleSearch = () => {
-    setShowInput(true);
+    setShowInput((prev) => !prev);
     setBgColor("bg-black");
   };
 
   const handleHiddenSearchBar = (e) => {
     if (e.target.id === "contenair") {
-      setShowInput(false);
+      setShowInput((prev) => !prev);
       setBgColor("bg-white");
     }
   };
